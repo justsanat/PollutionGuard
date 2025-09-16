@@ -332,20 +332,3 @@ CREATE TABLE api_logs (
   called_at DATETIME DEFAULT CURRENT_TIMESTAMP,
   INDEX (api_name, called_at)
 ) ENGINE=InnoDB;
-
--- Insert sample data for report_types
-INSERT INTO report_types (name, description, icon_url, severity_weight) VALUES
-('air', 'Air pollution reports', 'air_icon.png', 1.0),
-('water', 'Water pollution reports', 'water_icon.png', 1.0),
-('noise', 'Noise pollution reports', 'noise_icon.png', 0.8),
-('garbage', 'Garbage and waste issues', 'garbage_icon.png', 0.9),
-('traffic', 'Traffic congestion and pollution', 'traffic_icon.png', 0.7),
-('industrial', 'Industrial pollution', 'industrial_icon.png', 1.2),
-('other', 'Other types of pollution', 'other_icon.png', 1.0);
-
--- Insert sample data for agencies
-INSERT INTO agencies (name, type, contact_email, phone, response_time_avg_hours) VALUES
-('Dhaka North City Corporation', 'DNCC', 'contact@dncc.gov.bd', '+880XXXXXXX', 48),
-('Dhaka South City Corporation', 'DSCC', 'contact@dscc.gov.bd', '+880XXXXXXX', 48),
-('Water Supply and Sewerage Authority', 'WASA', 'info@dhakawasa.gov.bd', '+880XXXXXXX', 72),
-('Department of Environment', 'DOE', 'doe@doe.gov.bd', '+880XXXXXXX', 96);
